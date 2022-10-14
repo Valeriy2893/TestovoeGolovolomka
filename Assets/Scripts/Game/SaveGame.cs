@@ -49,7 +49,7 @@ public class SaveGame : MonoBehaviour
 
     public void Load()
     {
-        Invoke("FindObject", 0.1f);
+        FindObject();
         JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("Parameters"), this);
         Invoke("SetInfo", 0.1f);
     }

@@ -44,8 +44,8 @@ public class SaveGameUI : MonoBehaviour
     }
 
     public void LoadUI()
-    {
-        Invoke("FindObject", 0.1f);
+    { 
+        FindObject();
         JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("ParametersUI"), this);
         Invoke("SetInfoUI", 0.1f);
     }
